@@ -1,0 +1,22 @@
+ROSドメインのブリッジについて
+まずは必要なものから
+sudo apt update
+sudo apt install ros-humble-domain-bridge
+
+次にyamlファイルの作成 例：bridge_config.yaml
+name: my_domain_bridge
+topics:
+  /esp32_counter:
+    type: std_msgs/msg/Int32
+    from_domain: 0
+    to_domain: 1
+  /cmd_vel:
+    type: geometry_msgs/msg/Twist
+    from_domain: 1
+    to_domain: 0
+
+
+最後に起動
+ros2 run domain_bridge domain_bridge bridge_config.yaml
+
+これにより他のドメインでもトピックを横流しにすることができる

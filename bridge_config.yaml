@@ -1,0 +1,11 @@
+name: my_domain_bridge
+topics:
+  /esp32_counter:
+    type: std_msgs/msg/Int32
+    from_domain: 0
+    to_domain: 1
+  /cmd_vel:
+    type: geometry_msgs/msg/Twist
+    from_domain: 1
+    to_domain: 0
+# 必要に応じて他のトピック（/odomなど）も追加
