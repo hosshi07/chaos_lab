@@ -4,6 +4,11 @@ topics:
     type: std_msgs/msg/Int32
     from_domain: 0
     to_domain: 1
+    qos:
+      reliability: best_effort  # ESP32に合わせて送りっぱなしを許可
+      durability: volatile      # 過去のデータは保持しない（最新値のみ）
+      history: keep_last
+      depth: 5
   /cmd_vel:
     type: geometry_msgs/msg/Twist
     from_domain: 1
