@@ -1,4 +1,6 @@
 
+pip install roboflow
+
 ワークスペースの指定
 roboflow login
 を入力その後、出てくるURLを開く
