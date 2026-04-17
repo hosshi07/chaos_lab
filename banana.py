@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 import tkinter as tk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import sys
 
 # --- シミュレーション・制御ロジック（基本はそのまま） ---
 def run_simulation(kp, kd):
