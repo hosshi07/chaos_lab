@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 # モデルのロード
-model = YOLO("/home/hs/rcj26_dataset/runs/detect/wurzel26/weights/best.pt")
+model = YOLO("/home/hs/wurzel2.pt")
 
 # カメラの設定（0は内蔵カメラ、1以降は外付けUSBカメラ）
 cap = cv2.VideoCapture(0)
